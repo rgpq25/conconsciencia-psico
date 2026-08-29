@@ -13,9 +13,9 @@ export function HeroSection() {
       <div className="absolute left-[44%] top-0 h-52 w-52 rounded-b-full bg-white/70" aria-hidden="true" />
       <DottedCluster className="absolute right-10 top-52 hidden w-24 text-[#9cc7e4] md:block" />
 
-      <div className="relative z-10 mx-auto grid min-h-[41rem] max-w-7xl items-center gap-10 px-5 pb-24 pt-14 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:pb-20 lg:pt-20">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 lg:min-h-[41rem] lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:pb-20 lg:pt-20">
         <div className="reveal-soft max-w-[46rem]">
-          <h1 className="font-(family-name:--font-display) text-[clamp(3.5rem,5vw,4.65rem)] leading-[0.98] tracking-[-0.04em] text-[#0454a6]">
+          <h1 className="font-(family-name:--font-display) text-[2.15rem] leading-[1.12] tracking-[-0.02em] text-[#0454a6] sm:text-[2.75rem] lg:text-[clamp(3.5rem,5vw,4.65rem)] lg:leading-[0.98] lg:tracking-[-0.04em]">
             Acompañamos tu
             <br />
             <span className="text-[#ff5a1f]">bienestar emocional</span>

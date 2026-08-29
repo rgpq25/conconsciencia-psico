@@ -18,18 +18,18 @@ const features: Feature[] = [
   {
     title: "Acompañamiento psicológico",
     description: "Escucha profesional y contención emocional en cada etapa de tu vida.",
-    icon: <PeopleCareIcon className="size-14" />,
+    icon: <PeopleCareIcon className="size-8 md:size-14" />,
   },
   {
     title: "Bienestar emocional",
     description: "Trabajamos en tu equilibrio interior para que vivas con más calma y plenitud.",
-    icon: <BloomIcon className="size-16" />,
+    icon: <BloomIcon className="size-9 md:size-16" />,
     tone: "peach",
   },
   {
     title: "Desarrollo personal",
     description: "Te ayudamos a descubrir tu potencial y a construir relaciones más sanas contigo y con los demás.",
-    icon: <GrowthIcon className="size-[3.75rem]" />,
+    icon: <GrowthIcon className="size-8 md:size-[3.75rem]" />,
   },
 ];
 

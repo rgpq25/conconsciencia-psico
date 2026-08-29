@@ -57,14 +57,14 @@ export function ProcessSection() {
         <div className="relative z-10 lg:pl-32">
           <ProcessTimeline steps={processSteps} />
         </div>
-        <div className="relative hidden min-h-[32rem] items-center justify-center lg:flex">
-          <div className="absolute h-[28rem] w-[31rem] rounded-[45%_55%_52%_48%] bg-[#e3f0f8] opacity-85" aria-hidden="true" />
-          <div className="absolute right-16 top-10 h-56 w-56 rounded-full bg-[#f7fbfe] opacity-80" aria-hidden="true" />
+        <div className="relative flex min-h-[16rem] items-center justify-center lg:min-h-[32rem]">
+          <div className="absolute h-[15rem] w-[17rem] rounded-[45%_55%_52%_48%] bg-[#e3f0f8] opacity-85 lg:h-[28rem] lg:w-[31rem]" aria-hidden="true" />
+          <div className="absolute right-10 top-4 h-28 w-28 rounded-full bg-[#f7fbfe] opacity-80 lg:right-16 lg:top-10 lg:h-56 lg:w-56" aria-hidden="true" />
           <img
             src="/illustrations/botanical-branch.svg"
             alt=""
             aria-hidden="true"
-            className="relative z-10 w-[30rem] object-contain"
+            className="relative z-10 w-[16rem] object-contain lg:w-[30rem]"
             width="310"
             height="310"
             loading="lazy"

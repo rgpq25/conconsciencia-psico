@@ -15,14 +15,14 @@ export function SectionHeading({
 
   return (
     <div
-      className={`relative z-10 ${centered ? "mx-auto text-center" : "text-left"} ${className}`}
+      className={`relative z-10 mx-auto text-center ${centered ? "" : "md:mx-0 md:text-left"} ${className}`}
     >
-      <h2 className="font-[family-name:var(--font-display)] text-[clamp(2.1rem,4vw,3.55rem)] font-semibold leading-none tracking-[-0.03em] text-[#0454a6]">
+      <h2 className="font-[family-name:var(--font-display)] text-[clamp(1.85rem,7vw,3.55rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-[#0454a6] sm:leading-none">
         {title}
       </h2>
       <span
-        className={`mt-3 block h-[3px] w-16 rounded-full bg-[#ff5a1f] ${
-          centered ? "mx-auto" : ""
+        className={`mx-auto mt-3 block h-[3px] w-16 rounded-full bg-[#ff5a1f] ${
+          centered ? "" : "md:mx-0"
         }`}
         aria-hidden="true"
       />
