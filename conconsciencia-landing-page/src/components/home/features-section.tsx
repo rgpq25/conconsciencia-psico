@@ -3,7 +3,6 @@ import { IconCard } from "./icon-card";
 import {
   BloomIcon,
   GrowthIcon,
-  PaleLeafSpray,
   PeopleCareIcon,
 } from "./home-illustrations";
 import { SectionHeading } from "./section-heading";
@@ -37,8 +36,18 @@ const features: Feature[] = [
 export function FeaturesSection() {
   return (
     <section className="relative bg-[#fbfdff] px-5 pb-[4.5rem] pt-6 sm:px-8 lg:px-10 lg:pb-24">
-      <PaleLeafSpray className="absolute -left-12 top-16 hidden w-72 text-[#9cc7e4] md:block" />
-      <PaleLeafSpray className="absolute -right-12 top-20 hidden w-72 scale-x-[-1] text-[#9cc7e4] md:block" />
+      <img
+        src="/illustrations/pale-leaf-spray-left.svg"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 top-0 hidden w-72 max-w-none md:block"
+      />
+      <img
+        src="/illustrations/pale-leaf-spray-right.svg"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-0 hidden w-72 max-w-none md:block"
+      />
       <SectionHeading
         title="¿Qué hacemos?"
         subtitle="Somos un centro psicológico comprometido con tu bienestar integral. Ofrecemos un espacio seguro para escucharte, acompañarte y brindarte herramientas que impulsen tu crecimiento personal."

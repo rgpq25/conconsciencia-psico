@@ -39,11 +39,11 @@ export function HeroSection() {
           <div className="breathe-soft absolute bottom-10 right-4 h-[16rem] w-[18rem] rounded-[55%_45%_50%_50%] bg-[#fde2d5]/90 [animation-delay:1.5s]" aria-hidden="true" />
           <BranchAccent className="absolute bottom-12 right-2 w-44 rotate-[-10deg] text-[#9bbfda] opacity-70 sm:w-52" />
           <img
-            src="/branding/logo-icon.png"
-            alt="Ilustración de acompañamiento emocional"
-            className="relative z-10 w-[min(78vw,33.5rem)] object-contain drop-shadow-[0_28px_42px_rgba(22,72,116,0.12)]"
-            width="928"
-            height="928"
+            src="/illustrations/hero-embrace.svg"
+            alt="Ilustración de dos personas abrazándose con calidez"
+            className="relative z-10 w-[min(58vw,24rem)] object-contain drop-shadow-[0_28px_42px_rgba(22,72,116,0.12)]"
+            width="264"
+            height="378"
             loading="eager"
           />
         </div>

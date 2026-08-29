@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import {
-  BotanicalSpray,
   ChatIcon,
   ClipboardIcon,
   PersonIcon,
@@ -61,7 +60,15 @@ export function ProcessSection() {
         <div className="relative hidden min-h-[32rem] items-center justify-center lg:flex">
           <div className="absolute h-[28rem] w-[31rem] rounded-[45%_55%_52%_48%] bg-[#e3f0f8] opacity-85" aria-hidden="true" />
           <div className="absolute right-16 top-10 h-56 w-56 rounded-full bg-[#f7fbfe] opacity-80" aria-hidden="true" />
-          <BotanicalSpray className="relative z-10 w-[35rem]" />
+          <img
+            src="/illustrations/botanical-branch.svg"
+            alt=""
+            aria-hidden="true"
+            className="relative z-10 w-[30rem] object-contain"
+            width="310"
+            height="310"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

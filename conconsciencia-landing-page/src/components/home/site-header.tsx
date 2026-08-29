@@ -32,7 +32,7 @@ export function SiteHeader() {
         </a>
 
         <nav
-          className="hidden items-center gap-9 text-[0.92rem] font-extrabold text-[#0454a6] lg:flex"
+          className="hidden items-center gap-9 text-[0.92rem] font-semibold text-[#0454a6] lg:flex"
           aria-label="Navegación principal"
         >
           {navItems.map((item) => (
