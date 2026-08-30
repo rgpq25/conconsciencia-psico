@@ -8,11 +8,11 @@ export function AboutHeroSection() {
       <div className="absolute left-[44%] top-0 h-52 w-52 rounded-b-full bg-white/70" aria-hidden="true" />
       <DottedCluster className="absolute right-10 top-24 hidden w-24 text-[#9cc7e4] md:block" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 lg:min-h-[38rem] lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:pb-20 lg:pt-20">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-5 pb-12 pt-8 sm:px-8 lg:min-h-[38rem] lg:grid-cols-[1.08fr_0.92fr] lg:px-10 lg:pb-20 lg:pt-20">
         <div className="reveal-soft max-w-[46rem]">
           <p className="text-sm font-extrabold text-[#ff5a1f]">Quiénes somos</p>
           <span className="mt-2 block h-[3px] w-10 rounded-full bg-[#ff5a1f]" aria-hidden="true" />
-          <h1 className="mt-5 font-(family-name:--font-display) text-[2.15rem] leading-[1.12] tracking-[-0.02em] text-[#0454a6] sm:text-[2.75rem] lg:text-[clamp(3rem,4.4vw,4rem)] lg:leading-[1.02] lg:tracking-[-0.04em]">
+          <h1 className="mt-5 font-(family-name:--font-display) text-[2rem] leading-[1.14] tracking-[-0.02em] text-[#0454a6] sm:text-[2.6rem] lg:text-[clamp(3rem,4.4vw,4rem)] lg:leading-[1.02] lg:tracking-[-0.04em]">
             Somos un equipo que camina contigo hacia tu{" "}
             <span className="text-[#ff5a1f]">bienestar.</span>
           </h1>

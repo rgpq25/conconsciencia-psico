@@ -13,27 +13,27 @@ const values: Value[] = [
   {
     title: "Empatía",
     description: "Escuchamos con el corazón.",
-    icon: <HeartFilledIcon className="size-9 text-[#ff5a1f]" />,
+    icon: <HeartFilledIcon className="size-7 text-[#ff5a1f] md:size-9" />,
   },
   {
     title: "Confidencialidad",
     description: "Respetamos tu historia con total discreción.",
-    icon: <ShieldIcon className="size-9 text-[#0454a6]" />,
+    icon: <ShieldIcon className="size-7 text-[#0454a6] md:size-9" />,
   },
   {
     title: "Profesionalismo",
     description: "Trabajamos con ética, formación y compromiso.",
-    icon: <MedalIcon className="size-9 text-[#0454a6]" />,
+    icon: <MedalIcon className="size-7 text-[#0454a6] md:size-9" />,
   },
   {
     title: "Respeto",
     description: "Valoramos tu proceso, tus tiempos y decisiones.",
-    icon: <SproutLineIcon className="size-9 text-[#0454a6]" />,
+    icon: <SproutLineIcon className="size-7 text-[#0454a6] md:size-9" />,
   },
   {
     title: "Cercanía",
     description: "Creamos un vínculo cálido y humano.",
-    icon: <TwoPeopleIcon className="size-9 text-[#0454a6]" />,
+    icon: <TwoPeopleIcon className="size-7 text-[#0454a6] md:size-9" />,
   },
 ];
 
@@ -54,19 +54,25 @@ export function ValuesSection() {
       />
       <SectionHeading title="Lo que nos guía" />
 
-      <div className="relative z-10 mx-auto mt-10 grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-5 md:gap-x-0">
+      <div className="relative z-10 mx-auto mt-10 flex max-w-6xl flex-col md:grid md:grid-cols-5">
         {values.map((value, index) => (
           <div
             key={value.title}
-            className={`flex flex-col items-center px-2 text-center md:px-6 ${
+            className={`flex items-center gap-4 border-b border-[#e3ebf3] py-5 text-left last:border-b-0 md:flex-col md:items-center md:gap-0 md:border-b-0 md:px-6 md:py-0 md:text-center ${
               index === 0 ? "" : "md:border-l md:border-[#dbe7f2]"
             }`}
           >
-            <div className="grid size-20 place-items-center rounded-full bg-[#eef3f8]">{value.icon}</div>
-            <h3 className="mt-5 font-(family-name:--font-display) text-[1.35rem] font-bold leading-tight text-[#0454a6]">
-              {value.title}
-            </h3>
-            <p className="mt-2 text-[1rem] leading-7 text-[#315a82]">{value.description}</p>
+            <div className="grid size-14 shrink-0 place-items-center rounded-full bg-[#eef3f8] md:size-20">
+              {value.icon}
+            </div>
+            <div className="md:contents">
+              <h3 className="font-(family-name:--font-display) text-[1.05rem] font-bold leading-tight text-[#0454a6] md:mt-5 md:text-[1.35rem]">
+                {value.title}
+              </h3>
+              <p className="mt-1 text-[0.88rem] leading-6 text-[#315a82] md:mt-2 md:text-[1rem] md:leading-7">
+                {value.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>

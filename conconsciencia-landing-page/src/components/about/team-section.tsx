@@ -56,24 +56,30 @@ export function TeamSection() {
         {team.map((member) => (
           <article
             key={member.name}
-            className="soft-card-shadow flex flex-col items-center rounded-[1.7rem] border border-white/80 bg-white px-6 py-8 text-center transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(46,86,125,0.14)]"
+            className="soft-card-shadow flex flex-row items-center gap-4 rounded-[1.7rem] border border-white/80 bg-white px-5 py-5 text-left transition duration-500 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(46,86,125,0.14)] sm:flex-col sm:items-center sm:gap-0 sm:px-6 sm:py-8 sm:text-center"
           >
-            <div className="relative flex h-32 w-32 items-center justify-center">
+            <div className="relative flex h-24 w-24 shrink-0 items-center justify-center sm:h-32 sm:w-32">
               <div className="absolute inset-0 rounded-full bg-[#eef3f8]" aria-hidden="true" />
               <img
                 src={member.image}
                 alt={`Ilustración de ${member.name}`}
-                className="relative z-10 w-full max-w-[9.5rem] object-contain"
+                className="relative z-10 w-full max-w-[7rem] object-contain sm:max-w-[9.5rem]"
                 width={member.width}
                 height={member.height}
                 loading="lazy"
               />
             </div>
-            <h3 className="mt-5 font-(family-name:--font-display) text-[1.2rem] font-bold leading-tight text-[#0454a6]">
-              {member.name}
-            </h3>
-            <p className="mt-1 text-[0.86rem] font-extrabold text-[#ff5a1f]">{member.role}</p>
-            <p className="mt-2 text-[0.88rem] leading-6 text-[#315a82]">{member.bio}</p>
+            <div className="sm:contents">
+              <h3 className="font-(family-name:--font-display) text-[1.05rem] font-bold leading-tight text-[#0454a6] sm:mt-5 sm:text-[1.2rem]">
+                {member.name}
+              </h3>
+              <p className="mt-0.5 text-[0.8rem] font-extrabold text-[#ff5a1f] sm:mt-1 sm:text-[0.86rem]">
+                {member.role}
+              </p>
+              <p className="mt-1 text-[0.82rem] leading-6 text-[#315a82] sm:mt-2 sm:text-[0.88rem]">
+                {member.bio}
+              </p>
+            </div>
           </article>
         ))}
       </div>

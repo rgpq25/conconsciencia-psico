@@ -11,14 +11,16 @@ export function PurposeSection() {
       />
 
       <div className="relative z-10 mx-auto mt-10 grid max-w-5xl gap-7 md:grid-cols-2">
-        <article className="soft-card-shadow relative flex min-h-[19rem] flex-col items-center overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 px-8 py-9 text-center backdrop-blur">
-          <div className="grid size-24 place-items-center rounded-full bg-[#fff4ed] text-[#ff5a1f]">
-            <BloomIcon className="size-16" />
+        <article className="soft-card-shadow relative flex flex-col items-start overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 px-6 py-7 text-left backdrop-blur md:min-h-[19rem] md:items-center md:px-8 md:py-9 md:text-center">
+          <div className="flex items-center gap-4 md:flex-col md:gap-0">
+            <div className="grid size-16 shrink-0 place-items-center rounded-full bg-[#fff4ed] text-[#ff5a1f] md:size-24 md:mb-6">
+              <BloomIcon className="size-11 md:size-16" />
+            </div>
+            <h3 className="font-(family-name:--font-display) text-[1.3rem] font-bold leading-tight text-[#0454a6] md:text-[1.55rem]">
+              Misión
+            </h3>
           </div>
-          <h3 className="mt-6 font-(family-name:--font-display) text-[1.55rem] font-bold leading-tight text-[#0454a6]">
-            Misión
-          </h3>
-          <p className="relative z-10 mt-4 max-w-[26rem] text-[0.98rem] leading-7 text-[#315a82]">
+          <p className="relative z-10 mt-4 max-w-[26rem] text-[0.94rem] leading-7 text-[#315a82] md:text-[0.98rem]">
             Acompañar a las personas en sus procesos emocionales y psicológicos, ofreciendo estrategias efectivas y herramientas prácticas que favorezcan su bienestar, equilibrio y desarrollo personal.
           </p>
           <svg
@@ -37,14 +39,16 @@ export function PurposeSection() {
           </svg>
         </article>
 
-        <article className="soft-card-shadow relative flex min-h-[19rem] flex-col items-center overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 px-8 py-9 text-center backdrop-blur">
-          <div className="grid size-24 place-items-center rounded-full bg-[#e9f3fa] text-[#0454a6]">
-            <EyeIcon className="size-14" />
+        <article className="soft-card-shadow relative flex flex-col items-start overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 px-6 py-7 text-left backdrop-blur md:min-h-[19rem] md:items-center md:px-8 md:py-9 md:text-center">
+          <div className="flex items-center gap-4 md:flex-col md:gap-0">
+            <div className="grid size-16 shrink-0 place-items-center rounded-full bg-[#e9f3fa] text-[#0454a6] md:size-24 md:mb-6">
+              <EyeIcon className="size-9 md:size-14" />
+            </div>
+            <h3 className="font-(family-name:--font-display) text-[1.3rem] font-bold leading-tight text-[#0454a6] md:text-[1.55rem]">
+              Visión
+            </h3>
           </div>
-          <h3 className="mt-6 font-(family-name:--font-display) text-[1.55rem] font-bold leading-tight text-[#0454a6]">
-            Visión
-          </h3>
-          <p className="relative z-10 mt-4 max-w-[26rem] text-[0.98rem] leading-7 text-[#315a82]">
+          <p className="relative z-10 mt-4 max-w-[26rem] text-[0.94rem] leading-7 text-[#315a82] md:text-[0.98rem]">
             Ser un centro psicológico reconocido por su calidad humana y profesional, promoviendo una cultura de bienestar emocional y crecimiento consciente en nuestra comunidad.
           </p>
           <MountainsDecor className="pointer-events-none absolute bottom-0 left-0 w-full text-[#c8dcee] opacity-70" />
