@@ -14,8 +14,17 @@ type SiteHeaderProps = {
   currentPath?: string;
 };
 
+// Static builds emit "/quienes-somos/" (trailing slash) for the page's own
+// canonical path while dev serves whatever was requested, e.g. no trailing
+// slash - normalize both sides before comparing so the active state doesn't
+// depend on that.
+function normalizePath(path: string) {
+  return path.length > 1 ? path.replace(/\/+$/, "") : path;
+}
+
 export function SiteHeader({ currentPath = "/" }: SiteHeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const normalizedCurrentPath = normalizePath(currentPath);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#d9e6f2]/80 bg-white/92 shadow-[0_8px_28px_rgba(43,79,118,0.08)] backdrop-blur-xl">
@@ -46,7 +55,7 @@ export function SiteHeader({ currentPath = "/" }: SiteHeaderProps) {
           aria-label="Navegación principal"
         >
           {navItems.map((item) => {
-            const isActive = item.href === currentPath;
+            const isActive = normalizePath(item.href) === normalizedCurrentPath;
             return (
               <a
                 key={item.href}
@@ -91,7 +100,7 @@ export function SiteHeader({ currentPath = "/" }: SiteHeaderProps) {
         >
           <ul className="flex flex-col gap-1 text-base font-semibold text-[#0454a6]">
             {navItems.map((item) => {
-              const isActive = item.href === currentPath;
+              const isActive = normalizePath(item.href) === normalizedCurrentPath;
               return (
                 <li key={item.href}>
                   <a
