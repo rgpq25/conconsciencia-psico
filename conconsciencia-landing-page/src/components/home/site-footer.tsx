@@ -1,11 +1,11 @@
 import { SocialIcon } from "./home-illustrations";
 
 const footerLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#quienes-somos", label: "Quiénes somos" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#recursos", label: "Recursos" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/", label: "Inicio" },
+  { href: "/quienes-somos", label: "Quiénes somos" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#recursos", label: "Recursos" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 const socials = [
@@ -66,7 +66,7 @@ export function SiteFooter() {
             {socials.map((social) => (
               <a
                 key={social.kind}
-                href="#contacto"
+                href="/#contacto"
                 aria-label={social.label}
                 className={`grid size-9 place-items-center rounded-full bg-white shadow-[0_8px_18px_rgba(43,79,118,0.08)] transition duration-300 hover:-translate-y-0.5 ${social.color}`}
               >
@@ -80,9 +80,9 @@ export function SiteFooter() {
       <div className="mx-auto mt-4 flex max-w-7xl flex-col gap-2 px-5 text-xs font-semibold text-[#7b92a8] sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
         <p>&copy; 2024 ConConsciencia Centro Psicológico. Todos los derechos reservados.</p>
         <p>
-          <a href="#contacto" className="hover:text-[#ff5a1f]">Política de privacidad</a>
+          <a href="/#contacto" className="hover:text-[#ff5a1f]">Política de privacidad</a>
           <span className="mx-3">|</span>
-          <a href="#contacto" className="hover:text-[#ff5a1f]">Términos y condiciones</a>
+          <a href="/#contacto" className="hover:text-[#ff5a1f]">Términos y condiciones</a>
         </p>
       </div>
     </footer>

@@ -7,10 +7,14 @@ import { ServicesSection } from "./services-section";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 
-export function HomePage() {
+type HomePageProps = {
+  currentPath?: string;
+};
+
+export function HomePage({ currentPath = "/" }: HomePageProps) {
   return (
     <div className="min-h-screen overflow-hidden bg-[#f8fbff]">
-      <SiteHeader />
+      <SiteHeader currentPath={currentPath} />
       <main>
         <HeroSection />
         <FeaturesSection />

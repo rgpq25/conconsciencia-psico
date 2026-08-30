@@ -8,12 +8,12 @@ export function CtaSection() {
         <div className="absolute -left-14 -top-12 h-56 w-56 rounded-full border border-white/80 opacity-80" aria-hidden="true" />
         <BranchAccent className="absolute bottom-2 right-4 w-32 text-[#ff7a3d] opacity-75 sm:right-8 md:w-64" />
         <div className="relative z-10">
-          <h2 className="font-[family-name:var(--font-display)] text-[clamp(2.3rem,4vw,3.45rem)] font-semibold leading-none tracking-[-0.03em] text-[#0454a6]">
+          <h2 className="font-[family-name:var(--font-display)] text-[clamp(2.3rem,3vw,2.7rem)] font-semibold leading-none tracking-[-0.03em] text-[#0454a6]">
             Dar el primer paso puede
             <br />
             <span className="text-[#ff5a1f]">transformar tu vida.</span>
           </h2>
-          <p className="mt-4 text-xl font-semibold text-[#315a82]">Estamos aquí para acompañarte.</p>
+          <p className="mt-4 text-lg font-semibold text-[#315a82]">Estamos aquí para acompañarte.</p>
         </div>
         <AppointmentButton className="relative z-10 shrink-0" />
       </div>

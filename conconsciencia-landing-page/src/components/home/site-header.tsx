@@ -3,14 +3,18 @@ import { AppointmentButton } from "./appointment-button";
 import { CloseIcon, MenuIcon } from "./home-illustrations";
 
 const navItems = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#quienes-somos", label: "Quiénes somos" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#recursos", label: "Recursos" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/", label: "Inicio" },
+  { href: "/quienes-somos", label: "Quiénes somos" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#recursos", label: "Recursos" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
-export function SiteHeader() {
+type SiteHeaderProps = {
+  currentPath?: string;
+};
+
+export function SiteHeader({ currentPath = "/" }: SiteHeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -41,19 +45,27 @@ export function SiteHeader() {
           className="hidden items-center gap-9 text-[0.92rem] font-semibold text-[#0454a6] lg:flex"
           aria-label="Navegación principal"
         >
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="rounded-full px-1.5 py-2 transition duration-300 hover:text-[#ff5a1f]"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const isActive = item.href === currentPath;
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative rounded-full px-1.5 py-2 transition duration-300 hover:text-[#ff5a1f] ${
+                  isActive
+                    ? "text-[#ff5a1f] after:absolute after:-bottom-1 after:left-1/2 after:h-[2px] after:w-5 after:-translate-x-1/2 after:rounded-full after:bg-[#ff5a1f]"
+                    : ""
+                }`}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </nav>
 
         <a
-          href="#contacto"
+          href="/#contacto"
           className="hidden items-center justify-center rounded-full bg-[#ff5a1f] px-5 py-3 text-sm font-extrabold text-white shadow-[0_14px_28px_rgba(255,90,31,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#ff6c36] sm:px-7 lg:inline-flex lg:px-8 lg:py-4 lg:text-base"
         >
           Agenda tu sesión
@@ -78,17 +90,23 @@ export function SiteHeader() {
           aria-label="Navegación móvil"
         >
           <ul className="flex flex-col gap-1 text-base font-semibold text-[#0454a6]">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block rounded-xl px-3 py-3 transition duration-300 hover:bg-[#eef5fb] hover:text-[#ff5a1f]"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const isActive = item.href === currentPath;
+              return (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    aria-current={isActive ? "page" : undefined}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block rounded-xl px-3 py-3 transition duration-300 hover:bg-[#eef5fb] hover:text-[#ff5a1f] ${
+                      isActive ? "text-[#ff5a1f]" : ""
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
           <AppointmentButton className="mt-4 w-full" />
         </nav>

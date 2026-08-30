@@ -5,5 +5,5 @@ import { HomePage } from "../components/home/home-page";
 ---
 
 <BaseLayout>
-  <HomePage client:load />
+  <HomePage client:load currentPath={Astro.url.pathname} />
 </BaseLayout>
