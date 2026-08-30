@@ -3,7 +3,7 @@ import { SectionHeading } from "./section-heading";
 
 export function AboutSection() {
   return (
-    <section id="quienes-somos" className="bg-[#f8fbff] px-5 py-10 sm:px-8 lg:px-10">
+    <section className="bg-[#f8fbff] px-5 py-10 sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl items-center gap-8 rounded-[2.3rem] bg-white/40 px-6 py-8 shadow-[0_20px_60px_rgba(46,86,125,0.05)] sm:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:px-14 lg:py-10">
         <div>
           <img
@@ -32,6 +32,7 @@ export function AboutSection() {
             className="mt-8 px-8"
             label="Conoce más sobre nosotros"
             variant="arrow"
+            href="/quienes-somos"
           />
         </div>
       </div>
